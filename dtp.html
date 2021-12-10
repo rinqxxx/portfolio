@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/lightbox.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+	
+<script src="js/wookmark.min.js" type="text/javascript"></script>
+<!-- Once the page is loaded, initalize the plug-in. -->
+  <script type="text/javascript">
+    window.onload = function () {
+      var wookmark1 = new Wookmark('#wookmark1', {
+          outerOffset: 10, // Optional, the distance to the containers border
+          itemWidth: 320 // Optional, the width of a grid item
+      });
+
+      var wookmark2 = new Wookmark('#wookmark2', {
+          outerOffset: 10, // Optional, the distance to the containers border
+          itemWidth: 210 // Optional, the width of a grid item
+      });
+    };
+  </script>
+	
+</head>
+
+<body>
+	
+	<header>
+	<a href="index.html"><img src="images/logo.png"></a>
+	</header>
+	
+    <iframe src="menu.html" id="menuframe" scrolling="no" frameborder="0"></iframe>
+	
+	<div id="contents">
+		<ul class="tiles-wrap animated" id="wookmark1">
+          <li><a class="example-image-link" href="images/dtp/raviy01.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/raviy01.jpg" alt="" /></a></li>
+          <li><a class="example-image-link" href="images/dtp/raviy02.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/raviy02.jpg" alt="" /></a></li>
+          <li><a class="example-image-link" href="images/dtp/laviere.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/laviere.jpg" alt="" /></a></li>
+          <li><a class="example-image-link" href="images/dtp/raviy03.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/raviy03.jpg" alt="" /></a></li>
+          <li><a class="example-image-link" href="images/dtp/raviy04.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/raviy04.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	
+	<footer>
+	
+	</footer>
+	
+</body>
+</html>
