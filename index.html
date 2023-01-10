@@ -37,6 +37,24 @@
     <iframe src="menu.html" id="menuframe" scrolling="no" frameborder="0"></iframe>
 	
 	<div id="contents">
+		<script>
+function age(bymd){
+today=new Date();
+ty=today.getYear(); if(ty<1900) ty+=1900;
+tm=today.getMonth()+1;
+td=today.getDate();
+tymd=ty*10000+tm*100+td;
+document.write(Math.floor((tymd-bymd)/10000));
+}
+</script>
+		<p style="font-size: 1em;">鈴木里菜(<script>age(19941210)</script>)</p>
+		<p style="font-size: 0.8em;">
+		Webデザイナー歴<script>age(20120401)</script>年。<br>
+		グラフィックデザインの専門学校を卒業後、EC通販会社や広告代理店等に勤め、サイトの更新やバナー作成等Webデザイン業務を幅広く担当。<br>
+		<br>
+		使用可能ソフト<br>
+		Illustrator / Photoshop / Dreamweaver / Premiere Pro / After Effects
+		</p>
 		<ul class="tiles-wrap animated" id="wookmark1">
           <li><a class="example-image-link" href="images/banner/main0725p.jpg" data-lightbox="example-set"><img class="example-image" src="images/banner/main0725p.jpg" alt="" /></a></li>
           <li><a class="example-image-link" href="images/dtp/raviy01.jpg" data-lightbox="example-set"><img class="example-image" src="images/dtp/raviy01.jpg" alt="" /></a></li>
