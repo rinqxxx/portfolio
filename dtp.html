@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>portfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/lightbox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -26,15 +28,42 @@
     };
   </script>
 	
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+</style>
+	
 </head>
 
 <body>
 	
 	<header>
-	<a href="index.html"><img src="images/logo.png"></a>
+      <!-- ヘッダーロゴ -->
+		  <a href="index.html"><img src="images/logo.png"></a>
+    
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+    
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+    
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="banner.html">banner</a></li>
+            <li><a href="web.html">web</a></li>
+            <li><a href="dtp.html">dtp</a></li>
+          </ul>
+        </nav>
+   
+      </div>
+		
 	</header>
 	
-    <iframe src="menu.html" id="menuframe" scrolling="no" frameborder="0"></iframe>
+    <!--<iframe src="menu.html" id="menuframe" scrolling="no" frameborder="0"></iframe>-->
 	
 	<div id="contents">
 		<ul class="tiles-wrap animated" id="wookmark1">
