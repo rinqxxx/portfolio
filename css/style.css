@@ -6,9 +6,10 @@ li{list-style-type: none;}
 
 img{vertical-align: bottom;}
 
-header{width: 100%; height:95px;background-image: url("../images/head.png");background-size:100px;font-family: 'Satisfy', cursive;text-align: center;font-size: 40px;padding: 20px;color:#212121;}
-header a{text-decoration: none;color:#212121;}
-header img{width: 200px;vertical-align: baseline;}
+header{/*width: 100%;*/ height:95px;background-image: url("../images/head.png");background-size:100px;font-family:'Oooh Baby', cursive;text-align: center;padding: 20px;color:#212121;display: flex;justify-content: space-between;/*align-items: center;*/padding: 10px 20px 0px 40px;}
+header a{text-decoration: none;color:#fff;}
+header a:hover{color:#F1FFB0;}
+header img{width: 200px;vertical-align: baseline;margin-top: 10px}
 
 #contents {
   margin: 0 auto;
@@ -38,11 +39,46 @@ header img{width: 200px;vertical-align: baseline;}
 .example-image{outline:1px solid rgba(255, 255, 255, 0); width:300px;margin: 10px;box-shadow:5px 5px 10px 1px rgba(0,0,0,0.2);transition:all .3s ease-in-out;}
 .example-image:hover{outline:10px solid rgba(255, 255, 255, 1);transform: scale(1.05, 1.05);box-shadow:10px 10px 15px 1px rgba(0,0,0,0.2);transition: all 0.3s ease 0s;}
 
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {display: none;}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {display: flex;height: 40px;width: 40px;justify-content: center;align-items: center;position: relative;z-index: 100;cursor: pointer;}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,.drawer_open span:before,.drawer_open span:after {content: '';display: block;height: 3px;width: 25px;border-radius: 3px;background: #333;transition: 0.5s;position: absolute;}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {bottom: 8px;}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {top: 8px;}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {background: rgba(255, 255, 255, 0);}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {bottom: 0;transform: rotate(45deg);background: #fff;}
+#drawer_input:checked ~ .drawer_open span::after {top: 0;transform: rotate(-45deg);background: #fff;}
+  
+/* メニューのデザイン*/
+.nav_content {width: 200px;height: 100%;position: fixed;top: 0;right: -100%; /* メニューを画面の外に飛ばす */z-index: 99;background: rgba(0,0,0,0.5);transition: .5s;}
+
+/* メニュー黒ポチを消す */
+.nav_list {list-style: none;padding: 50px 30px;font-size: 1.5em;line-height: 2em;}
+.nav_list li{border-bottom: solid 1px rgba(255,255,255,0.1);}
+.nav_list li:last-child{border: none;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {right: 0;/* メニューを画面に入れる */}
+
 
 @media screen and (max-width: 650px) {
 	
-	header{height:60px;background-size:60px;padding:0;position: fixed;top: 0;z-index: 99;}
-    header img{width: 40%;vertical-align: middle;}
+	header{height:85px;background-size:90px;padding-top: 15px;position: fixed;top: 0;z-index: 99;}
+    header img{width: 70%;margin: 8px;vertical-align: middle;}
 	
     #menuframe{position: fixed;width:100%;top: 65px;height:60px;}
 	
@@ -57,5 +93,7 @@ header img{width: 200px;vertical-align: baseline;}
     .example-image{outline:1px solid rgba(255, 255, 255, 0); width:100%;margin:20px 0;box-shadow:5px 5px 10px 1px rgba(0,0,0,0.2);transition:all .3s ease-in-out;}
     .tiles-wrap li{position: relative;left: 0 !important;}
     .icon{right:10px;width: 15%;}
+	
+	.nav_content{width: 100%;}
 	
 }
